@@ -5,7 +5,7 @@ export default class SecondPage extends React.Component {
   pushPage() {
     this.props.navigator.pushPage({
       component: SecondPage,
-      props: { key: 'second' }
+      props: { key: `second${this.props.navigator.pages.length}` }
     });
   }
 

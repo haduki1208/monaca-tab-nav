@@ -1,5 +1,5 @@
 import 'react-hot-loader/patch';
-import {AppContainer} from 'react-hot-loader';
+import { AppContainer } from 'react-hot-loader';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ons from 'onsenui';
@@ -7,6 +7,7 @@ import ons from 'onsenui';
 // Onsen UI Styling and Icons
 require('onsenui/css-components-src/src/onsen-css-components.css');
 require('onsenui/css/onsenui.css');
+require('./main.css');
 
 import App from './App';
 
@@ -28,7 +29,7 @@ if (module.hot) {
     const NextApp = require('./App').default;
     ReactDOM.render(
       <AppContainer>
-         <NextApp />
+        <NextApp />
       </AppContainer>,
       rootElement
     );

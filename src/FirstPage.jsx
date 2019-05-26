@@ -6,7 +6,7 @@ export default class FirstPage extends React.Component {
   pushPage() {
     this.props.navigator.pushPage({
       component: SecondPage,
-      props: { key: 'second' }
+      props: { key: `second${this.props.navigator.pages.length}` }
     });
   }
 
@@ -17,9 +17,11 @@ export default class FirstPage extends React.Component {
           <div className="center">First Page</div>
         </Toolbar>
 
-        <p style={{ textAlign: 'center' }}>
-          <Button onClick={this.pushPage.bind(this)}>Push page</Button>
-        </p>
+        <div>
+          <p style={{ textAlign: 'center' }}>
+            <Button onClick={this.pushPage.bind(this)}>Push page</Button>
+          </p>
+        </div>
       </Page>
     );
   }

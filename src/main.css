@@ -1,0 +1,4 @@
+/* absoluteだとcomponentの上部が隠れちゃうので無理やり書き換えてる */
+ons-toolbar {
+  position: relative !important;
+}
